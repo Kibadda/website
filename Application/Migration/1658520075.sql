@@ -1,0 +1,5 @@
+ALTER TABLE users RENAME COLUMN locked_at TO created_at;
+ALTER TABLE users ADD COLUMN handle TEXT NOT NULL;
+ALTER TABLE users ADD COLUMN display_name TEXT NOT NULL;
+ALTER TABLE users ADD COLUMN locked_at TIMESTAMP WITH TIME ZONE DEFAULT null;
+ALTER TABLE users ADD CONSTRAINT users_handle_key UNIQUE(handle);
