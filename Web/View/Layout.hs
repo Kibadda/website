@@ -24,7 +24,7 @@ defaultLayout inner =
       </head>
       <body>
           {header}
-          <main>
+          <main class="container mt-4">
               {renderFlashMessages}
               {inner}
           </main>
@@ -37,7 +37,7 @@ header =
   [hsx|
     <header>
       <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/"><i class="fa-solid fa-home"></i> Home</a>
         <ul class="navbar-nav mr-auto">
         </ul>
         {renderAuthButtons}
@@ -49,7 +49,6 @@ footer :: Html
 footer =
   [hsx|
     <footer>
-      <h6>Michael Strobel 2022</h6>
     </footer>
   |]
 
@@ -80,6 +79,8 @@ stylesheets =
   [hsx|
     <link rel="stylesheet" href={assetPath "/vendor/bootstrap.min.css"}/>
     <link rel="stylesheet" href={assetPath "/vendor/flatpickr.min.css"}/>
+    <link rel="stylesheet" href={assetPath "/lib/fontawesome.min.css"}/>
+    <link rel="stylesheet" href={assetPath "/lib/solid.min.css"}/>
     <link rel="stylesheet" href={assetPath "/app.css"}/>
   |]
 
