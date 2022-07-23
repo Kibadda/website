@@ -36,7 +36,7 @@ header :: Html
 header =
   [hsx|
     <header>
-      <nav class="nav navbar-dark bg-dark navbar-expand-lg">
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="/">Home</a>
         <ul class="navbar-nav mr-auto">
         </ul>
@@ -89,8 +89,8 @@ scripts =
     {when isDevelopment devScripts}
     <script src={assetPath "/vendor/jquery-3.6.0.slim.min.js"}></script>
     <script src={assetPath "/vendor/timeago.js"}></script>
-    <script src={assetPath "/vendor/popper.js"}></script>
-    <script src={assetPath "/vendor/bootstrap.js"}></script>
+    <script src={assetPath "/vendor/popper.min.js"}></script>
+    <script src={assetPath "/vendor/bootstrap.min.js"}></script>
     <script src={assetPath "/vendor/flatpickr.js"}></script>
     <script src={assetPath "/vendor/morphdom-umd.min.js"}></script>
     <script src={assetPath "/vendor/turbolinks.js"}></script>
