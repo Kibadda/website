@@ -8,7 +8,7 @@ instance View WelcomeView where
   html WelcomeView =
     [hsx|
       <section>
-        <h1><i class="fa-solid fa-copyright"></i> Michael Strobel</h1>
+        <h1>{showUsername}</h1>
       </section>
       <section>
       </section>
@@ -21,6 +21,6 @@ showUsername =
   case currentUserOrNothing of
     Just currentUser ->
       [hsx|
-         <p>Hello {get #displayName currentUser}!</p>   
+         Hello {get #displayName currentUser}!
       |]
     Nothing -> [hsx||]
